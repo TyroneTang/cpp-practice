@@ -1,0 +1,22 @@
+services:
+  devcontainer:
+    container_name: cpp-learning
+    image: localhost/cpp-base:dev
+    working_dir: /workspace/project
+    user: devuser
+    network_mode: "host"
+    ipc: host
+    tty: true
+    stdin_open: true
+    privileged: true
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - ALL
+    volumes:
+      - $PWD/:/workspace/project
+      - /usr/local/share/ca-certificates:/usr/local/share/ca-certificates
+      - /etc/ssl/certs:/etc/ssl/certs
+      - $HOME/.gitconfig:/workspace/.gitconfig
+      - $HOME/.ssh:/workspace/.ssh:ro
+      - $HOME/.bashrc:/workspace/.bashrc

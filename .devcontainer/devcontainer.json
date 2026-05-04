@@ -1,0 +1,35 @@
+{
+  "name": "cpp-learning",
+  "dockerComposeFile": "./docker-compose.yaml",
+  "service": "devcontainer",
+  "runServices": ["devcontainer"],
+  "workspaceFolder": "/workspace/project",
+  "remoteUser": "devuser",
+  "containerUser": "devuser",
+  "updateRemoteUserUID": true,
+  "shutdownAction": "stopCompose",
+  // "postStartCommand": ".devcontainer/post_start_command.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-python.python",
+        "mhutchie.git-graph",
+        "xaver.clang-format",
+        "donjayamanne.githistory",
+        "ms-azuretools.vscode-docker",
+        "grimmer.vscode-back-forward-button",
+        "nick-rudenko.back-n-forth",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "ms-vscode.cpptools-extension-pack",
+        "azemoh.one-monokai",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "twxs.cmake",
+        "streetsidesoftware.code-spell-checker",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  }
+}
