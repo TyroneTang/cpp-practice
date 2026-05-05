@@ -20,3 +20,4 @@ services:
       - $HOME/.gitconfig:/workspace/.gitconfig
       - $HOME/.ssh:/workspace/.ssh:ro
       - $HOME/.bashrc:/workspace/.bashrc
+      - $HOME/.claude:/workspace/.claude

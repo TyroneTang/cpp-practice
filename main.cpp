@@ -8,6 +8,7 @@
 #include <fmt/base.h>
 #include <fmt/format.h>
 import utilities;
+import datatypes;
 
 
 int main(){
@@ -22,6 +23,10 @@ int main(){
     int result = sum(num_1, num_2);
 
     fmt::println("Result from utils sum: {}", result);
+
+
+    read_datatypes(true);
+
 
     return 0;
 }

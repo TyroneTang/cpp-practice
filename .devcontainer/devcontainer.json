@@ -27,8 +27,8 @@
         "azemoh.one-monokai",
         "llvm-vs-code-extensions.vscode-clangd",
         "twxs.cmake",
-        "streetsidesoftware.code-spell-checker",
-        "vadimcn.vscode-lldb"
+        "vadimcn.vscode-lldb",
+        "anthropic.claude-code"
       ]
     }
   }
