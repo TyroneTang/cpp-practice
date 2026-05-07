@@ -7,8 +7,11 @@
 // #include <fmt/format.h>
 #include <fmt/base.h>
 #include <fmt/format.h>
+#include <iostream>
 import utilities;
 import datatypes;
+import datatypes_2;
+import files;
 
 
 int main(){
@@ -26,6 +29,18 @@ int main(){
 
 
     read_datatypes(true);
+
+    read_datatypes_2(true);
+
+    read_integer_mod(true);
+
+    
+    fmt::println("Enter a path");
+    std::string path;
+
+    std::cin >> path;
+
+    file_module::bulk_rename(path);
 
 
     return 0;
