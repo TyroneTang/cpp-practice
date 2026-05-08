@@ -7,6 +7,7 @@ module;
 
 export module files;
 
+// this is similar to python staticmethod.
 export namespace file_module {
 
     void bulk_rename(const std::string& path) {

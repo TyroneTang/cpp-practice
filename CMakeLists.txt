@@ -26,3 +26,11 @@ target_sources(${PROJECT_NAME}
         src/files.cppm
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt)
+
+target_compile_options(${PROJECT_NAME} PRIVATE
+        -Werror # all warnings are treated as errors
+        -Wall # enable all common warnings
+        -Wextra # all extra warnings
+        -Wconversion # narrow type conversion
+        -Wshadow
+)

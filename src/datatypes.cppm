@@ -25,6 +25,7 @@ export void read_datatypes(bool is_enabled) {
     // float = 6 - 7 digit precision
     // double = 15 - 17 places precision.
     float single_precision = 1.125123123123121f;
+    [[maybe_unused]]
     double double_precision = 1.125123123123121f;
     fmt::println("check floating, {:.3f}", single_precision);
 

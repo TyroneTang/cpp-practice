@@ -7,7 +7,8 @@
 // #include <fmt/format.h>
 #include <fmt/base.h>
 #include <fmt/format.h>
-#include <iostream>
+// #include <iostream>
+
 import utilities;
 import datatypes;
 import datatypes_2;
@@ -35,13 +36,24 @@ int main(){
     read_integer_mod(true);
 
     
-    fmt::println("Enter a path");
-    std::string path;
+    // fmt::println("Enter a path");
+    // std::string path;
 
-    std::cin >> path;
+    // std::cin >> path;
 
-    file_module::bulk_rename(path);
+    // file_module::bulk_rename(path);
 
+    get_loops(true);
+
+    read_functions(true);
+    
+    read_arr_vec(true);
+
+    read_optionals_func(true);
+
+    read_reference(true);
+
+    read_ptrs_and_smrt_ptrs(true);
 
     return 0;
 }
