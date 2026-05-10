@@ -23,6 +23,7 @@ target_sources(${PROJECT_NAME}
         src/utilities.cppm
         src/datatypes.cppm
         src/datatypes_2.cppm
+        src/csv.cppm
         src/files.cppm
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt)

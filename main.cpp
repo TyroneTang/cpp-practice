@@ -29,11 +29,11 @@ int main(){
     fmt::println("Result from utils sum: {}", result);
 
 
-    read_datatypes(true);
+    read_datatypes(false);
 
-    read_datatypes_2(true);
+    read_datatypes_2(false);
 
-    read_integer_mod(true);
+    read_integer_mod(false);
 
     
     // fmt::println("Enter a path");
@@ -43,17 +43,19 @@ int main(){
 
     // file_module::bulk_rename(path);
 
-    get_loops(true);
+    get_loops(false);
 
-    read_functions(true);
+    read_functions(false);
     
-    read_arr_vec(true);
+    read_arr_vec(false);
 
-    read_optionals_func(true);
+    read_optionals_func(false);
 
-    read_reference(true);
+    read_reference(false);
 
-    read_ptrs_and_smrt_ptrs(true);
+    read_ptrs_and_smrt_ptrs(false);
+
+    read_classes_and_structs(true);
 
     return 0;
 }

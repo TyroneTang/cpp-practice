@@ -1,4 +1,5 @@
 module;
+#include <algorithm>
 #include <memory>
 #include <array>
 #include <vector>
@@ -284,7 +285,7 @@ export void read_classes_and_structs(bool is_enabled) {
                 fmt::println("a new house is created!");
             }
 
-            void get_info() const {
+            virtual void get_info() const {
                 fmt::println("Price {}, height: {}, num of doors {}", price, height, num_of_doors);
             }
 
@@ -298,8 +299,14 @@ export void read_classes_and_structs(bool is_enabled) {
 
     // inheritance
     class SpecialHouse : public House {
+        protected:
+            int mult;
         public:
-            SpecialHouse(int mult) : House(mult * 30, mult * 50, mult * 1) {
+            // constructor
+            SpecialHouse(int mult) : House(mult * 30, mult * 50, mult * 1), 
+            // init member
+            mult {mult}
+            {
                 fmt::println("A special house was craeted");
             }
 
@@ -312,10 +319,46 @@ export void read_classes_and_structs(bool is_enabled) {
             void increase_val(int amt) {
                 price += amt;
             }
+
+            void get_info() const override {
+                fmt::println("check special with multiplier {}. Price ${}, h: {}, doors: {}", mult, price, height, num_of_doors);
+            }
     };
 
     SpecialHouse new_special_house(30);
     new_special_house.get_info();
     new_special_house.jump();
     new_special_house.increase_val(500);
+    new_special_house.get_info();
+
+
+    bool is_determined = true;
+
+    House* house;
+
+    if (not is_determined)
+        house = &new_home;
+
+    else
+        house = &new_special_house;
+
+    house -> get_info();
+
+}
+
+
+export void algorithms(bool is_enabled) {
+    if (!is_enabled) {
+        fmt::println("algorithms module is not enabled. skipping...");
+        return;
+    }
+
+    std::vector<int> new_vec {1, 2, 3, 5, 6, 1, 0, 20, 11, 222, 80, 90, 99, 60};
+    std::sort(new_vec.begin(), new_vec.end());
+
+    for (int num : new_vec) {
+        fmt::println("{}", num);
+    }
+
+    fmt::println("is sorted!!!!!");
 }
